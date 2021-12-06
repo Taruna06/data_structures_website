@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Data Structures</title>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+<div class="img1" id="datastructure">
+<nav class="nav nav-pills flex-column flex-sm-row">
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#datastructure">Home</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#introduction">Introduction</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#basicterminology">Basic Terminology</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link " href="#need">Need for Data Structures</a>
+   <a class=" links flex-sm-fill text-sm-center nav-link " href="#basicoperations">Basic Operations</a>
+   <a class=" links flex-sm-fill text-sm-center nav-link " href="#characteristics">Characteristics</a>
+</nav>
+<div class="text">
+
+<span  class="border">
+Data Structures
+</span>
+</div>
+</div>
+<section class="section section-light" id="introduction">
+<h2>Introduction</h2>
+<p>
+Data Structures are the programmatic way of storing data so that data can be used efficiently. Almost every enterprise application uses various types of data structures in one or the other way. This tutorial will give you a great understanding on Data Structures needed to understand the complexity of enterprise level applications and need of algorithms, and data structures.
+</p>
+</section>
+<div class="img2" id="basicterminology">
+<div class="text">
+<span class="border second">
+Basic Terminology
+</span>
+</div>
+</div>
+<section class="section section-dark">
+<div class="side"><h2>Data</h2> <p> Data are values or set of values.</p></div>
+<div class="side"><h2>Data Item</h2> <p>Data item refers to single unit of values.</p></div>
+<div class="side"><h2>Group Items</h2>  <p>Data items that are divided into sub items are called as Group Items.</p></div>
+<div class="side"><h2>Elementary Items</h2><p>  Data items that cannot be divided are called as Elementary Items.</p></div>
+<div class="side"><h2>Attribute and Entity</h2><p>  An entity is that which contains certain attributes or properties, which may be assigned values.</p></div>
+<div class="side"><h2>Entity Set</h2><p> Entities of similar attributes form an entity set.</p></div>
+<div class="side"><h2>Field</h2> <p> Field is a single elementary unit of information representing an attribute of an entity.</p></div>
+<div class="side"><h2>Record</h2> <p> Record is a collection of field values of a given entity.</p></div>
+<div class="side"><h2>File</h2> <p> File is a collection of records of the entities in a given entity set.</p></div>
+
+</section>
+<div class="img1">
+<div class="text">
+<nav class="nav nav-pills flex-column flex-sm-row">
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="stack.html">Stack</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="linkedlist.html">Linked List</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="queue.html">Queue</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link " href="tree.html">Tree</a>
+</nav>
+</div>
+</div>
+<section class="section section-light" id="need">
+<h2>Need for Data Structure</h2>
+<p>
+As applications are getting complex and data rich, there are three common problems that applications face now-a-days.<br/>
+<ul>
+<li><strong>Data Search</strong> − Consider an inventory of 1 million(106) items of a store. If the application is to search an item, it has to search an item in 1 million(106) items every time slowing down the search. As data grows, search will become slower.</li>
+<li><strong>Processor speed </strong>− Processor speed although being very high, falls limited if the data grows to billion records.</li>
+<li><strong> Multiple requests </strong>− As thousands of users can search data simultaneously on a web server, even the fast server fails while searching the data.</li></ul>
+ To solve the above-mentioned problems, data structures come to rescue. Data can be organized in a data structure in such a way that all items may not be required to be searched, and the required data can be searched almost instantly.
+</p>
+</section>
+<div class="img3">
+<div class="text">
+<span class="border">
+Basic Operations
+</span>
+</div>
+</div>
+<section class="section section-dark" id="basicoperations">
+<p>
+The data in the data structures are processed by certain operations. The particular data structure chosen largely depends on the frequency of the operation that needs to be performed on the data structure.<br/>
+<ul>
+<li>Traversing</li>
+<li>Searching</li>
+<li>Insertion</li>
+<li>Deletion</li>
+<li>Sorting</li>
+<li>Merging</li>
+</ul>
+</section>
+<div class="img4">
+<div class="text">
+<span class="border">
+Characteristics
+</span>
+</div>
+</div>
+<section class="section section-light" id="characteristics">
+<p><ul>
+<li>Correctness − Data structure implementation should implement its interface correctly.</li>
+<li>Time Complexity − Running time or the execution time of operations of data structure must be as small as possible.</li>
+<li>Space Complexity − Memory usage of a data structure operation should be as little as possible.</li>
+</ul>
+</p>
+</section>
+<div class="img5" id="datastructure">
+<div class="text">
+<nav class="nav nav-pills flex-column flex-sm-row">
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#datastructure">Back To Home</a>
+</nav>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Queue</title>
+<link rel="stylesheet" href="style.css">
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+
+<style> 
+#top {
+  animation-name: example;
+ animation-duration:5s;
+  animation-iteration-count: infinite;
+
+}
+#end{
+  animation-name: example2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+.trouble{
+ width: 5rem;
+  height: 5rem;
+  background-color:  #595959;
+  position: relative;
+  display:inline-block;
+  top:10rem;
+  }
+
+@keyframes example {
+  0%   {background-color:#ebda71;top:0rem; }
+  100%  {background-color:#f3c107; top:10rem;}
+}
+@keyframes example2 {
+  0%  {background-color:#ebda71; top:10rem; }
+      100%  {background-color:#f3c107; top:15rem;}
+}
+.img5{
+	top:20rem;
+}
+</style>
+
+
+</head>
+<body>
+<div class="img1">
+<nav class="nav nav-pills flex-column flex-sm-row">
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="homePage.html">Home</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#introduction">Introduction</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#basicoperations">Basic Operations</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#animation">Animation</a>
+ 
+</nav>
+<div class="text">
+
+<span class="border" id="home">
+Queue
+</span>
+</div>
+</div>
+<section class="section section-light" id="introduction">
+<h2>Introduction</h2>
+<p>
+Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, a queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows First-In-First-Out methodology, i.e., the data item stored first will be accessed first.A real-world example of queue can be a single-lane one-way road, where the vehicle enters first, exits first. More real-world examples can be seen as queues at the ticket windows and bus-stops.
+</p>
+</section>
+<div class="img2">
+<div class="text">
+<span class="border" id="basicoperations">
+Basic Operations
+</span>
+</div>
+</div>
+<section class="section section-dark">
+<p>Queue operations may involve initializing or defining the queue, utilizing it, and then completely erasing it from the memory. Here we shall try to understand the basic operations associated with queues −</p>
+<ul>
+<li><strong>enqueue() - </strong>  add (store) an item to the queue.</li>
+<li><strong>dequeue()- </strong> remove (access) an item from the queue.</li>
+</ul>
+<p>Few more functions are required to make the above-mentioned queue operation efficient. These are −</p>
+<ul>
+<li><strong>peek() − </strong> Gets the element at the front of the queue without removing it.</li>
+<li><strong>isfull() −</strong>  Checks if the queue is full.</li>
+<li><strong>isempty() − </strong> Checks if the queue is empty.</li>
+</ul>
+<p>In queue, we always dequeue (or access) data, pointed by front pointer and while enqueing (or storing) data in the queue we take help of rear pointer.</p>
+</section>
+<div class="img3" id="animation">
+<div class="text">
+<span class="border second">
+Animation
+</span>
+</div>
+</div>
+<section class="section section-light">
+<div id="top" class="trouble"></div>
+<div class="trouble"></div>
+<div class="trouble"></div>
+<div class="trouble"></div>
+<div class="trouble"></div>
+<div id="end" class="trouble"></div>
+</section>
+<div class="img5" id="home">
+<div class="text">
+<nav class="nav nav-pills flex-column flex-sm-row">
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#home">Back To Home</a>
+</nav>
+</div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stacks</title>
+<link rel="stylesheet" href="style.css">
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+<style>
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: white;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: red;
+}
+#myAnimation2 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: blue;
+}
+#myAnimation3 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: green;
+}
+#myAnimation, #myAnimation2,#myAnimation3{
+display:inline-block;}
+
+</style>
+
+
+</head>
+<body>
+<div class="img1">
+<nav class="nav nav-pills flex-column flex-sm-row">
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="homePage.html">Home</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#introduction">Introduction</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#basicoperations">Basic Operations</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#animation">Animation</a>
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#algorithms">Algorithms</a>
+   <a class=" links flex-sm-fill text-sm-center nav-link" href="#pushandpop">PUSH and POP</a>
+</nav>
+<div class="text">
+
+<span class="border" id="home">
+Stacks
+</span>
+</div>
+</div>
+<section class="section section-light" id="introduction">
+<h2>Introduction</h2>
+<p>
+A stack is an Abstract Data Type (ADT), commonly used in most programming languages. It is named stack as it behaves like a real-world stack, for example – a deck of cards or a pile of plates, etc.A real-world stack allows operations at one end only. For example, we can place or remove a card or plate from the top of the stack only. Likewise, Stack ADT allows all data operations at one end only. At any given time, we can only access the top element of a stack.
+This feature makes it LIFO data structure. LIFO stands for Last-in-first-out. Here, the element which is placed (inserted or added) last, is accessed first. In stack terminology, insertion operation is called PUSH operation and removal operation is called POP operation.
+A stack can be implemented by means of Array, Structure, Pointer, and Linked List. Stack can either be a fixed size one or it may have a sense of dynamic resizing. 
+</p>
+</section>
+<div class="img2">
+<div class="text">
+<span class="border" id="basicoperations">
+Basic Operations
+</span>
+</div>
+</div>
+<section class="section section-dark">
+<p>
+Stack operations may involve initializing the stack, using it and then de-initializing it. Apart from these basic stuffs, a stack is used for the following two primary operations −
+<ul>
+<li><strong>push() − </strong>Pushing (storing) an element on the stack.</li>
+<li><strong>pop() − </strong>Removing (accessing) an element from the stack.</li></ul></br>
+When data is PUSHed onto stack.
+To use a stack efficiently, we need to check the status of stack as well. For the same purpose, the following functionality is added to stacks −
+<ul>
+<li><strong>peek() −</strong> get the top data element of the stack, without removing it.</li>
+<li><strong>isFull() −</strong> check if stack is full.</li>
+<li><strong>isEmpty() −</strong> check if stack is empty.</li>
+</ul>
+At all times, we maintain a pointer to the last PUSHed data on the stack. As this pointer always represents the top of the stack, hence named top. The top pointer provides top value of the stack without actually removing it.
+</p>
+</section>
+<div class="img1">
+<div class="text">
+<span class="border" id="animation">
+Animation
+</div>
+</div>
+<section class="section section-light">
+<button   onclick="myMove()">Step 1</button> 
+<button  onclick="myMove2()">Step 2</button> 
+<button   onclick="myMove3()">Step 3</button> 
+
+<div id ="myAnimation"></div>
+<div id="myAnimation2"></div>
+<div id="myAnimation3"></div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 200) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.left = pos + 'px';
+       elem.style.top = pos + 'px';
+    }
+  }
+}
+</script>
+
+
+<script>
+function myMove2() {
+  var elem = document.getElementById("myAnimation2");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 145) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px';   
+      elem.style.left = pos + 'px';   
+    }
+  }
+}
+</script>
+
+
+<script>
+function myMove3() {
+  var elem = document.getElementById("myAnimation3");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 90) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.left = pos + 'px'; 
+       elem.style.top = pos + 'px'; 
+    }
+  }
+}
+</script></br></br></br></br></br></br></br></br></br></br>
+</section>
+<div class="img3">
+<div class="text">
+<span class="border" id="algorithms">
+Algorithms
+</span>
+</div>
+</div>
+<section class="section section-dark" id="basicoperations"  style="text-align:left;">
+<p>Click the buttons to view the algorithms for various functions we use in stack</p>
+<div class="line">
+<button onclick="myFunction()" class="btn btn-outline-secondary">peek()</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "begin procedure peek</br> return stack[top]</br>end procedure</br>";
+}
+</script>
+<button onclick="myFunction2()" class="btn btn-outline-secondary">isfull()</button>
+<p id="demo2"></p>
+<script>
+function myFunction2() {
+  document.getElementById("demo2").innerHTML = "begin procedure isfull</br>if top equals to MAXSIZE</br>return true</br>else</br>return false</br>endif</br>end procedure</br>";
+}
+</script>
+<button onclick="myFunction3()"class="btn btn-outline-secondary">isempty()</button>
+<p id="demo3"></p>
+<script>
+function myFunction3() {
+  document.getElementById("demo3").innerHTML = "begin procedure isfull</br>if top equals to MAXSIZE</br>return true</br>else</br>return false</br>endif</br>end procedure</br>";
+}
+</script>
+</div>
+</section>
+<div class="img4">
+<div class="text">
+<span class="border" id="pushandpop">
+PUSH and POP
+</span>
+</div>
+</div>
+</section>
+<section class="section section-light" id="characteristics">
+<div>
+<h2>PUSH operation</h2>
+The process of putting a new data element onto stack is known as a Push Operation. Push operation involves a series of steps −
+<ul>
+<li>Step 1 − Checks if the stack is full.</li>
+<li>Step 2 − If the stack is full, produces an error and exit.</li>
+<li>Step 3 − If the stack is not full, increments top to point next empty space.</li>
+<li>Step 4 − Adds data element to the stack location, where top is pointing.</li>
+<li>Step 5 − Returns success.</li>
+</ul>
+</div>
+<div>
+<h2>POP operation</h2>
+Accessing the content while removing it from the stack, is known as a Pop Operation. In an array implementation of pop() operation, the data element is not actually removed, instead top is decremented to a lower position in the stack to point to the next value. But in linked-list implementation, pop() actually removes data element and deallocates memory space.A Pop operation may involve the following steps −
+<ul>
+<li>Step 1 − Checks if the stack is empty.</li>
+<li>Step 2 − If the stack is empty, produces an error and exit.</li>
+<li>Step 3 − If the stack is not empty, accesses the data element at which top is pointing.</li>
+<li>Step 4 − Decreases the value of top by 1.</li>
+<li>Step 5 − Returns success.</li>
+</div>
+
+</div>
+</div>
+</section>
+<div class="img5" id="datastructure">
+<div class="text">
+<nav class="nav nav-pills flex-column flex-sm-row">
+  <a class=" links flex-sm-fill text-sm-center nav-link" href="#home">Back To Home</a>
+</nav>
+</div>
+</div>
+
+</body>
+</html>
+
+

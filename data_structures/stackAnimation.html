@@ -1,0 +1,92 @@
+<style>
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: white;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: red;
+}
+#myAnimation2 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: blue;
+}
+#myAnimation3 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: green;
+}
+#myAnimation, #myAnimation2,#myAnimation3{
+display:inline-block;}
+
+</style>
+
+
+
+<button   onclick="myMove()">Step 1</button> 
+<button  onclick="myMove2()">Step 2</button> 
+<button   onclick="myMove3()">Step 3</button> 
+
+<div id ="myAnimation"></div>
+<div id="myAnimation2"></div>
+<div id="myAnimation3"></div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.left = pos + 'px';
+       elem.style.top = pos + 'px';
+    }
+  }
+}
+</script>
+
+
+<script>
+function myMove2() {
+  var elem = document.getElementById("myAnimation2");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 295) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px';   
+      elem.style.left = pos + 'px';   
+    }
+  }
+}
+</script>
+
+
+<script>
+function myMove3() {
+  var elem = document.getElementById("myAnimation3");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 237) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.left = pos + 'px'; 
+       elem.style.top = pos + 'px'; 
+    }
+  }
+}
+</script>
